@@ -7,7 +7,17 @@
 //
 
 import UIKit
+import SafariServices
 
 class Video: NSObject {
+    
+    var title = String()
+    var url = String()
+    
+    convenience init(title: String, url: String) {
+        self.init()
+        self.title = title
+        self.url = url
+    }
 
 }
