@@ -52,8 +52,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func onTappedPlayVideoButton(_ sender: UIButton) {
         let url = URL(string: urlTextField.text!)
-        let svc = SFSafariViewController(url: url!)
-        present(svc, animated: true, completion: nil)
+        UIApplication.shared.open(url!, options: [:], completionHandler: nil)
     }
 
 
