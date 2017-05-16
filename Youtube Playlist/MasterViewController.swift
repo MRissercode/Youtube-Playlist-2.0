@@ -30,10 +30,10 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        createHomeButton()
         for video in videos {
             objects.append(video)
         }
-        createHomeButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController {
     
     func createHomeButton() {
         let home = Video(title: "Home", url: "http://www.youtube.com")
-        objects[0] = home
+        objects.append(home)
     }
     
     func insertNewObject(_ sender: Any) {
