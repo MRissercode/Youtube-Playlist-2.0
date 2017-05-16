@@ -16,6 +16,10 @@
 		3F47BC3D1EC4CA2D00E10EB8 /* Youtube_PlaylistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47BC3C1EC4CA2D00E10EB8 /* Youtube_PlaylistTests.swift */; };
 		3F47BC481EC4CA2D00E10EB8 /* Youtube_PlaylistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47BC471EC4CA2D00E10EB8 /* Youtube_PlaylistUITests.swift */; };
 		3F47BC561EC4CAD500E10EB8 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F47BC551EC4CAD500E10EB8 /* Video.swift */; };
+		3F47BC771ECA129600E10EB8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F47BC761ECA129600E10EB8 /* Realm.framework */; };
+		3F47BC781ECA129600E10EB8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F47BC761ECA129600E10EB8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3F47BC7B1ECA12A000E10EB8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F47BC7A1ECA12A000E10EB8 /* RealmSwift.framework */; };
+		3F47BC7C1ECA12A000E10EB8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F47BC7A1ECA12A000E10EB8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +37,29 @@
 			remoteGlobalIDString = 3F47BC211EC4CA2D00E10EB8;
 			remoteInfo = "Youtube Playlist";
 		};
+		3F47BC6B1ECA0D9400E10EB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F47BC671ECA0D9400E10EB8 /* RealmPlugin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2263AAB619B0A1E6007240D9;
+			remoteInfo = RealmPlugin;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3F47BC791ECA129600E10EB8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3F47BC7C1ECA12A000E10EB8 /* RealmSwift.framework in Embed Frameworks */,
+				3F47BC781ECA129600E10EB8 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F47BC221EC4CA2D00E10EB8 /* Youtube Playlist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Playlist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +77,9 @@
 		3F47BC471EC4CA2D00E10EB8 /* Youtube_PlaylistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube_PlaylistUITests.swift; sourceTree = "<group>"; };
 		3F47BC491EC4CA2D00E10EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F47BC551EC4CAD500E10EB8 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		3F47BC671ECA0D9400E10EB8 /* RealmPlugin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RealmPlugin.xcodeproj; path = "../realm-swift-2.6.2/plugin/RealmPlugin.xcodeproj"; sourceTree = "<group>"; };
+		3F47BC761ECA129600E10EB8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		3F47BC7A1ECA12A000E10EB8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F47BC7B1ECA12A000E10EB8 /* RealmSwift.framework in Frameworks */,
+				3F47BC771ECA129600E10EB8 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +112,13 @@
 		3F47BC191EC4CA2D00E10EB8 = {
 			isa = PBXGroup;
 			children = (
+				3F47BC7A1ECA12A000E10EB8 /* RealmSwift.framework */,
+				3F47BC761ECA129600E10EB8 /* Realm.framework */,
 				3F47BC241EC4CA2D00E10EB8 /* Youtube Playlist */,
 				3F47BC3B1EC4CA2D00E10EB8 /* Youtube PlaylistTests */,
 				3F47BC461EC4CA2D00E10EB8 /* Youtube PlaylistUITests */,
 				3F47BC231EC4CA2D00E10EB8 /* Products */,
+				3F47BC661ECA0D9400E10EB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +165,22 @@
 			path = "Youtube PlaylistUITests";
 			sourceTree = "<group>";
 		};
+		3F47BC661ECA0D9400E10EB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F47BC671ECA0D9400E10EB8 /* RealmPlugin.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F47BC681ECA0D9400E10EB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F47BC6C1ECA0D9400E10EB8 /* RealmPlugin.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +191,7 @@
 				3F47BC1E1EC4CA2D00E10EB8 /* Sources */,
 				3F47BC1F1EC4CA2D00E10EB8 /* Frameworks */,
 				3F47BC201EC4CA2D00E10EB8 /* Resources */,
+				3F47BC791ECA129600E10EB8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +275,12 @@
 			mainGroup = 3F47BC191EC4CA2D00E10EB8;
 			productRefGroup = 3F47BC231EC4CA2D00E10EB8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3F47BC681ECA0D9400E10EB8 /* Products */;
+					ProjectRef = 3F47BC671ECA0D9400E10EB8 /* RealmPlugin.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3F47BC211EC4CA2D00E10EB8 /* Youtube Playlist */,
@@ -232,6 +289,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3F47BC6C1ECA0D9400E10EB8 /* RealmPlugin.xcplugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RealmPlugin.xcplugin;
+			remoteRef = 3F47BC6B1ECA0D9400E10EB8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F47BC201EC4CA2D00E10EB8 /* Resources */ = {
@@ -422,6 +489,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Youtube Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "The.Youtube-Playlist";
@@ -434,6 +505,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Youtube Playlist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "The.Youtube-Playlist";

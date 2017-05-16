@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 import SafariServices
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [NSObject]()
+    var objects = [Any]()
+    let realm = try! Realm()
+    lazy var videos: Results<Video> = {
+        self.realm.objects(Video.self)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +29,9 @@ class MasterViewController: UITableViewController {
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+        for video in videos {
+            objects.append(video)
         }
         createHomeButton()
     }
@@ -41,7 +49,7 @@ class MasterViewController: UITableViewController {
     
     func createHomeButton() {
         let home = Video(title: "Home", url: "http://www.youtube.com")
-        objects.append(home)
+        objects[0] = home
     }
     
     func insertNewObject(_ sender: Any) {
@@ -59,6 +67,9 @@ class MasterViewController: UITableViewController {
             let urlTextField = alert.textFields![1] as UITextField
             let video = Video(title: titleTextField.text!, url: urlTextField.text!)
             self.objects.append(video)
+            try! self.realm.write {
+                self.realm.add(video)
+            }
             self.tableView.reloadData()
         }
         alert.addAction(insertAction)
@@ -99,7 +110,10 @@ class MasterViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
+            let video = objects.remove(at: indexPath.row) as! Video
+            try! self.realm.write {
+                self.realm.delete(video)
+            }
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
