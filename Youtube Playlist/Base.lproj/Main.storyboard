@@ -39,46 +39,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BkL-y5-Ksq">
-                                <rect key="frame" x="97" y="72" width="200" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMv-i3-IWd">
-                                <rect key="frame" x="152.5" y="110" width="89" height="30"/>
+                                <rect key="frame" x="87" y="72" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mok-8U-b6M">
-                                <rect key="frame" x="161" y="148" width="72" height="30"/>
+                                <rect key="frame" x="151" y="148" width="72" height="30"/>
                                 <state key="normal" title="Play Video"/>
                                 <connections>
                                     <action selector="onTappedPlayVideoButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="wiU-gb-Xf9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUq-ht-pNl">
-                                <rect key="frame" x="180" y="186" width="34" height="30"/>
+                                <rect key="frame" x="170" y="186" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="bc2-64-2JW"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMv-i3-IWd">
+                                <rect key="frame" x="37" y="110" width="300" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="81" id="18u-C7-qZq"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="mok-8U-b6M" secondAttribute="centerX" id="1YO-I8-bTO"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="CMv-i3-IWd" secondAttribute="centerX" id="8EM-r2-Q1L"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="XUq-ht-pNl" secondAttribute="centerX" id="9yE-gP-QTn"/>
-                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="Ema-wj-toY"/>
-                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="Phc-LH-jaI"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="VvC-Q5-5OE"/>
-                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="X1g-Kj-4FF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BkL-y5-Ksq" secondAttribute="trailing" constant="62" id="gYu-iI-kxw"/>
-                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="hIO-6L-pC3"/>
-                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="pV2-UH-ADp"/>
-                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="sX0-8Q-0fy"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="156-4R-i0f"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="5m1-ZK-kTn"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="NGj-HQ-yLm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mok-8U-b6M" secondAttribute="trailing" constant="136" id="OJd-7h-drP"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="S9S-rQ-icl"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="21" id="VKX-LW-NcK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CMv-i3-IWd" secondAttribute="trailing" constant="22" id="ZUq-8X-4mz"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="aj5-zM-RxD"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="XUq-ht-pNl" secondAttribute="bottom" constant="451" id="da3-9f-gbX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XUq-ht-pNl" secondAttribute="trailing" constant="155" id="eY4-al-ZqK"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="154" id="fNI-0x-oVv"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="i2S-aV-wSF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BkL-y5-Ksq" secondAttribute="trailing" constant="72" id="jvF-Ti-G1d"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="lXf-IT-90Y"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="71" id="oeP-Ri-kis"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="rWe-Te-GCR"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="wGd-qH-wFe"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="135" id="wI6-N2-oTU"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="wlj-nC-1t1"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="xww-VD-hRG"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -90,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="708" y="128.18590704647679"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
