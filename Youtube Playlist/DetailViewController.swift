@@ -12,7 +12,7 @@ import SafariServices
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var detailNavigationItem: UINavigationItem!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var urlTextField: UITextField!
     let realm = try! Realm()
@@ -20,9 +20,10 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let video = detailItem {
-            if titleTextField != nil {
+            if titleTextField != nil && urlTextField != nil {
                 titleTextField.text = video.title
                 urlTextField.text = video.url
+                detailNavigationItem.title = video.title
             }
         }
     }
@@ -50,6 +51,7 @@ class DetailViewController: UIViewController {
             try! realm.write {
                 video.title = titleTextField.text!
                 video.url = urlTextField.text!
+                detailNavigationItem.title = video.title
             }
         }
     }
