@@ -39,67 +39,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mok-8U-b6M">
-                                <rect key="frame" x="151" y="148" width="72" height="30"/>
+                                <rect key="frame" x="128" y="148" width="118" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="3E3-T5-xm1"/>
-                                    <constraint firstAttribute="height" constant="30" id="U89-MR-yC7"/>
+                                    <constraint firstAttribute="width" constant="118" id="9mR-wr-aqx"/>
+                                    <constraint firstAttribute="height" constant="30" id="ERg-LX-riV"/>
                                 </constraints>
-                                <state key="normal" title="Play Video"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Play Video">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onTappedPlayVideoButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="wiU-gb-Xf9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUq-ht-pNl">
-                                <rect key="frame" x="170" y="186" width="34" height="30"/>
+                                <rect key="frame" x="160" y="186" width="55" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="34" id="tso-Uf-kuP"/>
-                                    <constraint firstAttribute="height" constant="30" id="vUY-Le-YE2"/>
+                                    <constraint firstAttribute="height" constant="30" id="SNS-VQ-Csq"/>
+                                    <constraint firstAttribute="width" constant="55" id="T74-Gq-DnK"/>
                                 </constraints>
-                                <state key="normal" title="Save"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="JEX-9P-axG" eventType="touchUpInside" id="bc2-64-2JW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video URL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMv-i3-IWd">
-                                <rect key="frame" x="37" y="110" width="300" height="30"/>
+                                <rect key="frame" x="37" y="72" width="300" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="asw-tR-FVJ"/>
-                                    <constraint firstAttribute="width" constant="300" id="x2W-Tv-qxM"/>
+                                    <constraint firstAttribute="height" constant="30" id="1It-Eg-i0K"/>
+                                    <constraint firstAttribute="width" constant="300" id="t5t-9U-D2Q"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="URL"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Video Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BkL-y5-Ksq">
-                                <rect key="frame" x="37" y="72" width="300" height="30"/>
+                                <rect key="frame" x="37" y="110" width="300" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="7Dd-Hi-eei"/>
-                                    <constraint firstAttribute="height" constant="30" id="88L-Y4-WSB"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ddv-Q3-W80"/>
+                                    <constraint firstAttribute="width" constant="300" id="ZN4-6t-STR"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="CMv-i3-IWd" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="0Fn-x0-j8l"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="21" id="1Oe-N3-dEp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CMv-i3-IWd" secondAttribute="trailing" constant="22" id="99G-hH-KcM"/>
-                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="9W9-oj-ZNr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mok-8U-b6M" secondAttribute="trailing" constant="136" id="Blx-aT-cEa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="XUq-ht-pNl" secondAttribute="trailing" constant="155" id="QZB-8h-FaA"/>
-                            <constraint firstItem="mok-8U-b6M" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="135" id="SmJ-bX-OIi"/>
-                            <constraint firstItem="CMv-i3-IWd" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="21" id="T90-uX-gsM"/>
-                            <constraint firstItem="XUq-ht-pNl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="154" id="Wj1-IN-PVz"/>
-                            <constraint firstItem="mok-8U-b6M" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="fJo-rC-2Bm"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="XUq-ht-pNl" secondAttribute="bottom" constant="451" id="kSc-6o-DDh"/>
-                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="lFx-24-98F"/>
-                            <constraint firstItem="XUq-ht-pNl" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="meR-HL-dwY"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="pyv-vj-fGf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BkL-y5-Ksq" secondAttribute="trailing" constant="22" id="qBP-G1-VFc"/>
-                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="tyn-uM-lv8"/>
-                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="vXv-hw-7v4"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="top" secondItem="mok-8U-b6M" secondAttribute="bottom" constant="8" id="1Z7-nB-N9X"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="21" id="25x-c7-EXP"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="2Pt-bV-l1f"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="2fs-LR-Chd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CMv-i3-IWd" secondAttribute="trailing" constant="22" id="5Yd-zK-XZZ"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="XUq-ht-pNl" secondAttribute="bottom" constant="451" id="7f8-kr-ilC"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="HCj-Go-MfO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BkL-y5-Ksq" secondAttribute="trailing" constant="22" id="JRU-oV-UzZ"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="PhY-4D-GR4"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="top" secondItem="CMv-i3-IWd" secondAttribute="bottom" constant="8" id="aAJ-AC-v6w"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="top" secondItem="BkL-y5-Ksq" secondAttribute="bottom" constant="8" id="dth-Ld-Qwe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mok-8U-b6M" secondAttribute="trailing" constant="113" id="gPI-lW-ZzM"/>
+                            <constraint firstItem="BkL-y5-Ksq" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="21" id="guA-RP-tdf"/>
+                            <constraint firstItem="CMv-i3-IWd" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="jJy-5M-LeP"/>
+                            <constraint firstItem="mok-8U-b6M" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="112" id="oJ1-oM-fCr"/>
+                            <constraint firstItem="XUq-ht-pNl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="144" id="wii-l5-Fse"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XUq-ht-pNl" secondAttribute="trailing" constant="144" id="ycS-3M-5bN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -157,7 +163,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Arm-wq-HPj">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
